@@ -1,0 +1,7 @@
+.idea/
+out/
+.classpath
+.project
+429JavaFXEnvironment.iml
+ErrorLog.txt
+*.class

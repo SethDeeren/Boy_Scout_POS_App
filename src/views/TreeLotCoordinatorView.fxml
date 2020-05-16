@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<GridPane hgap="10.0" layoutX="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="313.0" prefWidth="461.0" vgap="10.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.TreeLotCoordinatorViewController">
+    <columnConstraints>
+        <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="118.0" minWidth="10.0" prefWidth="105.79996337890626" />
+        <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="164.0" minWidth="10.0" prefWidth="85.00003662109376" />
+        <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="149.0" minWidth="10.0" prefWidth="110.80000000000004" />
+      <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="136.0" minWidth="0.0" prefWidth="30.60003662109375" />
+      <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="136.0" minWidth="9.799951171875023" prefWidth="28.999963378906273" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="43.400000000000006" minHeight="10.0" prefHeight="32.20001220703125" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="43.400000000000006" minHeight="10.0" prefHeight="32.20001220703125" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="35.39999999999998" minHeight="10.0" prefHeight="19.199987792968756" vgrow="SOMETIMES" />
+    </rowConstraints>
+    <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+    </padding>
+    <children>
+        <Button alignment="CENTER" mnemonicParsing="false" onAction="#goToRegisterScout" prefHeight="31.0" prefWidth="80.0" text="Register" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <Button mnemonicParsing="false" onAction="#goToSearchScouts" prefHeight="31.0" prefWidth="118.0" text="Update/Delete" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+        <Button mnemonicParsing="false" onAction="#goToRegisterTreeType" prefHeight="14.0" prefWidth="80.0" text="Register" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        <Button mnemonicParsing="false" onAction="#goToSearchTreeTypes" prefHeight="31.0" prefWidth="118.0" text="Update" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+        <Button mnemonicParsing="false" onAction="#goToRegisterTree" prefHeight="31.0" prefWidth="80.0" text="Add" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+        <Button mnemonicParsing="false" onAction="#goToSearchTrees" prefHeight="31.0" prefWidth="118.0" text="Update/Delete" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+        <Label text="Scout:" GridPane.rowIndex="1">
+            <GridPane.margin>
+                <Insets left="5.0" />
+            </GridPane.margin>
+        </Label>
+        <Label text="Tree Type:" GridPane.rowIndex="2" />
+        <Label text="Tree:" GridPane.rowIndex="3" />
+        <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1" />
+        <Label text="Session:" GridPane.rowIndex="4" />
+        <Button fx:id="openShift" mnemonicParsing="false" onAction="#openShift" prefHeight="31.0" prefWidth="80.0" text="Open" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+        <Button fx:id="editCloseShift" mnemonicParsing="false" onAction="#closeShift" prefHeight="31.0" prefWidth="118.0" text="Close" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+        <Text fill="#247f44" strokeType="OUTSIDE" strokeWidth="0.0" text="Tree Lot" GridPane.columnIndex="1">
+            <font>
+                <Font size="26.0" />
+            </font>
+        </Text>
+        <Text fill="#247f44" strokeType="OUTSIDE" strokeWidth="0.0" text="Cordinator" GridPane.columnIndex="2">
+            <font>
+                <Font size="26.0" />
+            </font>
+        </Text>
+      <Label text="Sell A Tree:" GridPane.rowIndex="5" />
+      <Button fx:id="sellTreeButton" mnemonicParsing="false" onAction="#onSellTree" prefHeight="26.0" prefWidth="50.0" text="Sell  " GridPane.columnIndex="2" GridPane.rowIndex="5">
+         <GridPane.margin>
+            <Insets left="60.0" />
+         </GridPane.margin>
+      </Button>
+      <TextField fx:id="sellTreeBarcode" minWidth="-Infinity" prefHeight="26.0" prefWidth="124.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+         <GridPane.margin>
+            <Insets left="10.0" right="-60.0" />
+         </GridPane.margin>
+      </TextField>
+      <Text fx:id="sellTreeMessage" fill="#f20303" strokeType="OUTSIDE" strokeWidth="0.0" text="Session must be open" GridPane.columnIndex="2" GridPane.rowIndex="6">
+         <GridPane.margin>
+            <Insets bottom="30.0" left="-80.0" />
+         </GridPane.margin>
+      </Text>
+    </children>
+</GridPane>

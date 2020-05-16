@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="207.0" prefWidth="407.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CloseAShiftController">
+   <children>
+      <Text fx:id="confirmationMessage" layoutX="39.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="All transactions have been processed. Session is close">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Button fx:id="cancel" layoutX="248.0" layoutY="124.0" mnemonicParsing="false" onAction="#onCancel" prefHeight="40.0" prefWidth="95.0" text="Cancel" />
+      <Button fx:id="close" layoutX="82.0" layoutY="124.0" mnemonicParsing="false" onAction="#onClose" prefHeight="40.0" prefWidth="95.0" text="Close" />
+      <Text fx:id="noTransactionMessage" layoutX="54.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="There were no Transactions made. Shift is closed">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+   </children>
+</Pane>

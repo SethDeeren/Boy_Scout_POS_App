@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="584.0" prefWidth="672.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.OpenShiftScoutSelectionController">
+    <children>
+        <Text layoutX="163.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Scouts for Shift">
+            <font>
+                <Font size="36.0" />
+            </font>
+        </Text>
+        <ListView fx:id="scoutListView" layoutX="19.0" layoutY="152.0" prefHeight="339.0" prefWidth="306.0" />
+      <ListView fx:id="selectedListView" layoutX="350.0" layoutY="152.0" prefHeight="339.0" prefWidth="306.0" />
+        <Button fx:id="menuButton" layoutX="541.0" layoutY="514.0" mnemonicParsing="false" onAction="#goMainMenu" text="Main Menu" />
+        <Button fx:id="finishButton" layoutX="480.0" layoutY="514.0" mnemonicParsing="false" onAction="#onFinish" text="Finish" />
+        <Button fx:id="addButton" layoutX="424.0" layoutY="514.0" mnemonicParsing="false" onAction="#addScout" text="Add" />
+        <Text fx:id="editText" fill="RED" layoutX="211.0" layoutY="565.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Shift successfully added." textAlignment="CENTER" visible="false" wrappingWidth="248.64901733398438">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Text>
+      <Label layoutX="350.0" layoutY="135.0" text="Selected Scouts:" />
+      <Label layoutX="19.0" layoutY="135.0" text="Available Scouts:" />
+        <AnchorPane fx:id="popup" layoutX="147.0" layoutY="122.0" prefHeight="381.0" prefWidth="378.0" style="-fx-border-color: red; -fx-border-width: 3; -fx-background-color: white;" visible="false">
+            <children>
+                <Text fill="#191b19" layoutX="93.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name:" textAlignment="CENTER" wrappingWidth="38.399999999999864" />
+                <Button fx:id="popupSubmit" defaultButton="true" layoutX="93.0" layoutY="297.0" mnemonicParsing="false" onAction="#onSubmitCompanionName" text="Submit" textAlignment="CENTER">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Button>
+                <Button fx:id="popupCancel" layoutX="223.0" layoutY="297.0" mnemonicParsing="false" onAction="#onCancellCompanionName" text="Cancel" textAlignment="CENTER">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Button>
+            <TextField fx:id="companionName" layoutX="147.0" layoutY="109.0" prefHeight="31.0" prefWidth="196.0" />
+            <Text fill="#191b19" layoutX="38.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+            <Label layoutX="72.0" layoutY="173.0" text="End Time:" />
+            <Text fx:id="timeText" fill="RED" layoutX="149.0" layoutY="206.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Must be HH:MM" wrappingWidth="148.5078125" />
+            <TextField fx:id="companionHourTime" layoutX="149.0" layoutY="168.0" prefHeight="25.0" prefWidth="28.0" />
+            <TextField fx:id="companionMinTime" layoutX="189.0" layoutY="168.0" prefHeight="25.0" prefWidth="28.0" />
+            <ComboBox fx:id="companionTime" layoutX="226.0" layoutY="167.0" prefHeight="25.0" prefWidth="64.0" />
+            <Label layoutX="180.0" layoutY="166.0" prefHeight="16.0" prefWidth="4.0" text=":">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Text fill="#191b19" layoutX="92.0" layoutY="246.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hours:" textAlignment="CENTER" wrappingWidth="38.399999999999864" />
+            <TextField fx:id="companionHours" layoutX="146.0" layoutY="226.0" prefHeight="31.0" prefWidth="149.0" />
+            <Text fx:id="hoursText" fill="RED" layoutX="146.0" layoutY="270.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Must be an integer" visible="false" wrappingWidth="148.5078125" />
+            <Text layoutX="119.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Companion">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>
